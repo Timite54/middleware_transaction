@@ -1,5 +1,9 @@
 package lucky.man.transaction_middleware.repository;
 
-public class OderRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import lucky.man.transaction_middleware.entities.Orders;
 
-}
+public interface OderRepository extends JpaRepository<Orders, Long>{
+
+    
+} 

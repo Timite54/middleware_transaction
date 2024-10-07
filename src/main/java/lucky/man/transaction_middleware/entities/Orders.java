@@ -8,11 +8,13 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
-public class User {
+@Table(name = "orders")
+public class Orders {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName;
-    private String email;
-
+    private String name;
+    private Integer amount;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
