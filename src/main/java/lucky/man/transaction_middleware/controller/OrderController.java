@@ -2,6 +2,7 @@ package lucky.man.transaction_middleware.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lucky.man.transaction_middleware.common.response.APIResponse;
 import lucky.man.transaction_middleware.dto.OrderRequestDto;
 import lucky.man.transaction_middleware.dto.OrderResponseDto;
 import lucky.man.transaction_middleware.services.OrderService;
@@ -18,8 +19,8 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping
-    public ResponseEntity<OrderResponseDto> CreateOrders(@Valid @RequestBody OrderRequestDto orderRequestDto) {
-        ResponseEntity<OrderResponseDto> response = orderService.creatOrder(orderRequestDto);
-        return ResponseEntity.status(201).body(response.getBody());
+    public ResponseEntity<APIResponse<OrderResponseDto>> CreateOrders(@Valid @RequestBody OrderRequestDto orderRequestDto) {
+        APIResponse<OrderResponseDto> response = orderService.creatOrder(orderRequestDto);
+        return ResponseEntity.status(201).body(response);
     }
 }

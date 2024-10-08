@@ -1,12 +1,19 @@
 package lucky.man.transaction_middleware.dto;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import lucky.man.transaction_middleware.entities.User;
 
-@Data
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderResponseDto {
     private String name;
     private Integer amount;
-    private User user;
+    private UserResponseDto user;
 
 }
