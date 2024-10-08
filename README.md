@@ -4,9 +4,9 @@ Code source de l implémentation du middleware de transaaction
 Pour exécuter le projet en local
 
 Cloner le répertoire
-`git clone `
+`git clone  https://github.com/Timite54/middleware_transaction/`
 Instancier la base la base de données 
-`cd src/main/resources https://github.com/Timite54/middleware_transaction/`
+`cd src/main/resources`
 Importer le projet dans intellij ou tout autre éditeur de code
 
 ## `File > open ... > selectionner le repertoire`
